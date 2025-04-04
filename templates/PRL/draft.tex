@@ -1,0 +1,120 @@
+\documentclass[floats,floatfix,showpacs,amssymb,prd,twocolumn,superscriptaddress,nofootinbib,nolongbibliography,reprint]{revtex4-2}
+
+\usepackage{amssymb,amsmath,verbatim,mathtools,needspace,enumitem,etoolbox,graphicx,physics,microtype,afterpage,bigints,gensymb,tabularx,xspace,bbm}
+
+\usepackage[dvipsnames, usenames]{xcolor}
+\definecolor{linkcolor}{rgb}{0.0,0.3,0.5}
+\usepackage[unicode, colorlinks=true, linkcolor=linkcolor, citecolor=linkcolor, filecolor=linkcolor,urlcolor=linkcolor, pdfusetitle]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{orcidlink}
+\usepackage{bibunits}
+\usepackage{overpic,makecell,multirow} 
+\usepackage{xtab,afterpage,longtable}
+\usepackage[normalem]{ulem}
+
+\interfootnotelinepenalty=10000
+\newcommand{\ssim}{\mathchar"5218\relax\,}
+\newcommand{\ttimes}{\!\times\!\relax}
+
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+\makeatletter
+\newcommand*{\balancecolsandclearpage}{\close@column@grid \cleardoublepage \twocolumngrid}
+\makeatother
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand{\sm}{Supplemental Material\xspace}
+\newcommand{\prltitle}{My Awesome Paper}
+
+\newcommand\prlsec[1]{\vspace{2mm}\noindent \textbf{\textit{#1}}\,---}
+
+\newcommand{\milan}{\affiliation{Dipartimento di Fisica ``G. Occhialini'', Universit\`a degli Studi di Milano-Bicocca, Piazza della Scienza 3, 20126 Milano, Italy}}
+\newcommand{\infn}{\affiliation{INFN, Sezione di Milano-Bicocca, Piazza della Scienza 3, 20126 Milano, Italy}}
+
+\newcommand{\dg}[1]{{\color{RedOrange}DG: #1}}
+\newcommand{\vdr}[1]{{\color{Cyan}VDR: #1}}
+\newcommand{\costa}[1]{{\color{Magenta}CP: #1}}
+\newcommand{\mm}[1]{{\color{ForestGreen}MM: #1}}
+
+\newcommand{\new}[1]{{\color{RedOrange}#1}}
+
+\makeatletter
+\def\maketitle{
+\@author@finish
+\title@column\titleblock@produce
+\suppressfloats[t]}
+\makeatother
+
+
+
+\begin{document}
+
+\newcommand{\titleprl}{Write a paper}
+\title{\titleprl}
+
+\author{Davide Gerosa$\,$\orcidlink{0000-0002-0933-3579}}
+\email{davide.gerosa@unimib.it}
+\milan \infn
+
+\author{friends}
+
+\pacs{}
+
+\date{\today}
+
+\begin{abstract}
+
+I'm an abstract.
+
+\end{abstract}
+
+\maketitle
+
+\defaultbibliography{semisup}
+\defaultbibliographystyle{apsrev4-2}
+\begin{bibunit}
+
+\prlsec{Introduction}
+
+I'm a section \cite{2016PhRvL.116f1102A}.
+
+
+\prlsec{Acknowledgements} 
+
+
+\putbib
+\end{bibunit}
+\begin{bibunit}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\clearpage \pagebreak
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\bibnumfmt}[1]{[S#1]}
+\renewcommand{\citenumfont}[1]{S#1}
+
+%%%%%%%
+% For submitting to PRL
+%\setcounter{page}{1}
+%\title{{\sc \sm} \\ \titleprl}
+
+% For the arxiv
+{\sc \sm}
+%%%%%%%
+
+\prlsec{Something}
+
+
+
+\putbib
+\end{bibunit}
+
+
+
+\end{document}
