@@ -5,6 +5,7 @@ This is a template repository to write scientific papers with latex and git.
 A github action will compile the paper at every commit. The latest version is made available at this permanent URL
 
 > [github.com/FranciscaDB/test2/blob/build/draft.pdf](https://github.com/FranciscaDB/test2/blob/build/draft.pdf)
+> uwu
 
 
 #### Instructions: 
